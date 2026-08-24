@@ -1,28 +1,24 @@
-body{
-    background-color: black;
+#count{
+    display: block;
+    font-size: 100px;
+    text-align: center;
+    font-family: helvetica;
 }
 
-body::selection{
-    color: aliceblue;
-    background-color: hsla(0, 0%, 35%, 0.785);
-}
-h1{
-    color: hsla(133, 63%, 75%, 0.767);
+#buttons{
+    text-align: center;
 }
 
-#P1{
-    color: hsl(0, 77%, 61%);
+.btn{
+    padding: 10px;
+    font-size: 20px;
+    background-color: hsl(147, 86%, 73%);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
 }
 
-#P2{
-    color: hsla(55, 77%, 61%, 0.842);
+.btn:hover{
+    background-color: hsla(147, 86%, 73%, 0.703);
+    
 }
-
-#P3{
-    color: hsl(209, 77%, 55%);
-}
-
-#P4{
-    color: hsl(283, 71%, 64%);
-}
-
