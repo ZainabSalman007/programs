@@ -5,19 +5,14 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <form>
-      <h1>Temperature Conversion</h1>
-      <input type="number" id="textbox" value="0"><br>
-
-      <input type="radio" name="unit" id="toCelsius" > 
-     <label for="toCelsius">Fahrenheit to Celsius</label><br>
-
-     <input type="radio" name="unit" id="toFahrenheit" > 
-     <label for="toFahrenheit">Celsius to Fahrenheit</label><br>
-
-     <button type="button" onclick="convert()">submit</button>
-     <p id="result"></p>
-   </form>
+   <div id="container">
+      <h1>Dice Roller</h1><br>
+      <label >dice no</label>
+      <input type="number" value="1" min="1" id="diceNo">
+      <button onclick="rollDice()"> Roll Dice </button>
+      <div id="diceResult"></div>
+      <div id="diceImages"></div>
+   </div>
    
    <script src="code.js"></script>
 </body>

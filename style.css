@@ -1,54 +1,48 @@
 body{
-    background-color: hsl(0, 0%, 94%);
+    background-color: beige;
+}
+
+#container{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
-
-form{
-    background-color: hsl(0, 100%, 100%);
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px hsl(0, 1%, 68%);
-}
-
-h1{
-    color: hsl(267, 60%, 76%);
-}
-
-#textbox{
-    width: 50%;
-    padding: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 16px;
-}
-
-#textbox 
 
 label{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5em;
+}
+
+#diceNo{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
 }
 
 button{
-    background-color: hsl(267, 60%, 76%);
-    color: hsl(0, 100%, 100%);
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 1.1em;
+    padding: 5px;
     border-radius: 5px;
-    margin-top: 20px;
+    border: none; 
+    cursor: pointer;
+    background-color:hsl(206, 100%, 82%);
 }
 
 button:hover{
-    background-color:hsl(267, 60%, 66%) ;
+    background-color: hsl(206, 100%, 87%);
 }
 
-p{
-    margin-top: 20px;
-    font-size: 18px;
+button:active{
+    background-color: hsl(206, 100%, 90%);;
+}
+
+#diceResult{
+    margin: 25px;
     font-weight: bold;
+    font-size: 1.1em;
+}
+
+#diceImages img{
+    margin: 10px;
+    width: 100px; 
+    border-radius: 13px;
 }
