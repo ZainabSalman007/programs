@@ -5,7 +5,19 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
+   <form>
+      <h1>Temperature Conversion</h1>
+      <input type="number" id="textbox" value="0"><br>
+
+      <input type="radio" name="unit" id="toCelsius" > 
+     <label for="toCelsius">Fahrenheit to Celsius</label><br>
+
+     <input type="radio" name="unit" id="toFahrenheit" > 
+     <label for="toFahrenheit">Celsius to Fahrenheit</label><br>
+
+     <button type="button" onclick="convert()">submit</button>
+     <p id="result"></p>
+   </form>
    
    <script src="code.js"></script>
 </body>
