@@ -1,1 +1,57 @@
+body{
+    background-color: hsl(238, 27%, 24%);
+    color: hsl(0, 0%, 100%);
+}
 
+div{
+    text-align: center;
+    margin-top: 100px;
+    background-color: hsla(237, 20%, 38%, 0.959);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    Box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.947);
+}
+
+input[type="number"] {
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    text-align: center;
+    max-width: 50%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(273, 49%, 79%);
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(273, 49%, 69%);
+}
+
+button:active {
+    background-color: hsl(273, 49%, 59%);
+}
+
+p{
+    font-size: 30px;
+    font-weight: bold;
+    color: hsl(0, 100%, 98%);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
