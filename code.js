@@ -1,18 +1,16 @@
-const password = document.getElementById("password");
-const submit = document.getElementById("submit");
-const result = document.getElementById("result");
-
-submit.onclick = function() {
-    const passwordValue = password.value;
-    if (passwordValue.length < 8) {
-        result.textContent = "Password must be at least 8 characters long.";
-    }else if (!/[A-Z]/.test(passwordValue)) {
-        result.textContent = "Password must contain at least one uppercase letter.";
-    }else if (!/[a-z]/.test(passwordValue)) {
-        result.textContent = "Password must contain at least one lowercase letter.";
-    }else if (!/[0-9]/.test(passwordValue)) {
-        result.textContent = "Password must contain at least one number.";
-    }else {
-        result.textContent = "Password is valid.";
-    }
+function greetings(name) {
+    return "Hello, " + name + "!";
 }
+
+function displayGreeting() {
+    const nameInput = document.getElementById("greetings");
+    const resultParagraph = document.getElementById("result");
+    const name = nameInput.value;
+    const greetingMessage = greetings(name);
+    resultParagraph.textContent = greetingMessage;
+}
+
+const button = document.getElementById("submit");
+button.onclick = () => {
+    displayGreeting();
+};
