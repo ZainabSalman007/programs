@@ -2,22 +2,29 @@ const age = document.getElementById("age");
 const submitButton = document.getElementById("submit");
 const result = document.getElementById("result");
 
-function checkAge(age) {
-    return age ;
+function userAge(age) {
+   let Age = age.value ;
+   return Age;
 }
 
-function displayMessage() {
-    if (checkAge(age.value) > 0 && checkAge(age.value) < 13) {
-        result.textContent = "You are a kid.";
-    }else if (checkAge(age.value) >= 13 && checkAge(age.value) <= 17) {
-        result.textContent = "You are a teenager.";
-    }else if (checkAge(age.value) >= 18 && checkAge(age.value) < 60) {
-        result.textContent = "You are an adult.";
-    }else if (checkAge(age.value) >= 60 && checkAge(age.value) <= 120) {
-        result.textContent = "You are a senior citizen.";
-    }else {
-        result.textContent = "you do not exist Muhahahah .";
+function checkAge() {
+    if (userAge(age.value) > 0 && userAge(age.value) < 13) {
+      return "You are a kid.";
+    }
+    else if (userAge(age.value) >= 13 && userAge(age.value) <= 17) {
+        return "You are a teenager.";
+    }
+    else if (userAge(age.value) >= 18 && userAge(age.value) < 60) {
+        return "You are an adult.";
+    }
+    else if (userAge(age.value) >= 60 && userAge(age.value) <= 120) {
+        return "You are a senior citizen.";
+    }
+    else {
+        return "you do not exist Muhahahah .";
     }
 }
 
-submitButton.addEventListener("click", displayMessage);
+function displayResult() {
+    result.textContent = checkAge();
+}
