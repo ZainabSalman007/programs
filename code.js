@@ -3,23 +3,28 @@ const submitButton = document.getElementById("submit");
 const result = document.getElementById("result");
 
 function userAge(age) {
-   let Age = age.value ;
-   return Age;
+   return age.value;
 }
 
 function checkAge() {
-    if (userAge(age.value) > 0 && userAge(age.value) < 13) {
+    let Age = userAge(age);
+
+    if (Age > 0 && Age < 13) {
       return "You are a kid.";
     }
-    else if (userAge(age.value) >= 13 && userAge(age.value) <= 17) {
+
+    else if (Age >= 13 && Age <= 17) {
         return "You are a teenager.";
     }
-    else if (userAge(age.value) >= 18 && userAge(age.value) < 60) {
+
+    else if (Age >= 18 && Age < 60) {
         return "You are an adult.";
     }
-    else if (userAge(age.value) >= 60 && userAge(age.value) <= 120) {
+
+    else if (Age >= 60 && Age <= 120) {
         return "You are a senior citizen.";
     }
+
     else {
         return "you do not exist Muhahahah .";
     }
@@ -28,3 +33,5 @@ function checkAge() {
 function displayResult() {
     result.textContent = checkAge();
 }
+
+submitButton.addEventListener("click", displayResult);
