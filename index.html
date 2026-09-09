@@ -5,19 +5,30 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>Stopwatch</h1>
-   
-   <div id="container">
-     <div id="display">
-      00:00:00:00
-     </div>
+  <div id="calculator">
+    <input id="display" readonly>
+    <div id="keys">
+      <button onclick="work('+')" class="operators">+</button>
+      <button onclick="work('7')">7</button>
+      <button onclick="work('8')">8</button>
+      <button onclick="work('9')">9</button>
+      <button onclick="work('-')" class="operators">-</button>
+      <button onclick="work('4')">4</button>
+      <button onclick="work('5')">5</button>
+      <button onclick="work('6')">6</button>
+      <button onclick="work('*')" class="operators">*</button>
+      <button onclick="work('1')">1</button>
+      <button onclick="work('2')">2</button>
+      <button onclick="work('3')">3</button>
+      <button onclick="work('/')" class="operators">/</button>
+      <button onclick="work('0')">0</button>
+      <button onclick="work('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="erase()" class="operators">C</button>
 
-     <div id="controls">
-      <button id="start" onclick="start()">start</button>
-      <button id="stop" onclick="stop()">stop</button>
-      <button id="reset" onclick="reset()">reset</button>
-     </div>
-   </div>
+    </div>
+  </div>
+
    <script src="code.js"></script>
 </body>
 </html>
