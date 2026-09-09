@@ -5,12 +5,19 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>Digital Clock:</h1>
-   <div id="clock-container">
-      
-      <div id="clock">00:00:00</div>
-   </div>
+   <h1>Stopwatch</h1>
+   
+   <div id="container">
+     <div id="display">
+      00:00:00:00
+     </div>
 
+     <div id="controls">
+      <button id="start" onclick="start()">start</button>
+      <button id="stop" onclick="stop()">stop</button>
+      <button id="reset" onclick="reset()">reset</button>
+     </div>
+   </div>
    <script src="code.js"></script>
 </body>
 </html>

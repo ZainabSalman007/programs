@@ -1,28 +1,72 @@
 body{
-    margin: 0%;
-    background-color: hsl(255, 21%, 37%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: hsl(300, 1%, 66%);
 }
 
 h1{
-    text-align: center;
-    font-weight: bold;
-    font-size: 70px;
-    color: aliceblue;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsla(0, 0%, 1%, 0.863);
 }
 
-#clock-container{
-    justify-content: center;
+#container{
     display: flex;
-    align-items: center;
-    height: 50vh;
+    flex-direction: column;
+    border: 5px solid;
+    text-align: center;
+    padding: 30px;
+    background-color: aliceblue;
+    border-radius: 50px;
 }
 
-#clock{
+#display{
+    font-size: 5rem;
     font-family: monospace;
-    font-size: 100px;
-    background-color:rgb(228, 175, 221);
-    color: aliceblue;
-    border-radius: 15px;
-    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: hsla(0, 0%, 0%, 0.831);
 }
 
+#controls button{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    min-width: 125px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#start{
+    background-color: hsl(137, 58%, 58%);
+    color:hsla(0, 0%, 0%, 0.811);
+}
+
+#start:hover{
+    background-color: hsl(137, 58%, 38%);
+    color:hsla(0, 0%, 0%, 0.811);
+}
+
+#stop{
+     background-color: hsl(0, 54%, 58%);
+    color:hsla(0, 0%, 0%, 0.811);
+}
+
+#stop:hover{
+    background-color: hsl(0, 54%, 48%);
+    color:hsla(0, 0%, 0%, 0.811);
+}
+
+#reset{
+    background-color: hsl(193, 58%, 58%);
+    color:hsla(0, 0%, 0%, 0.811);
+}
+
+#reset:hover{
+     background-color: hsl(193, 58%, 38%);
+    color:hsla(0, 0%, 0%, 0.811);
+}
