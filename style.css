@@ -1,0 +1,28 @@
+body{
+    margin: 0%;
+    background-color: hsl(255, 21%, 37%);
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+    color: aliceblue;
+}
+
+#clock-container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 100px;
+    background-color:rgb(228, 175, 221);
+    color: aliceblue;
+    border-radius: 15px;
+    padding: 10px;
+}
+
