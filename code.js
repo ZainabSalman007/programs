@@ -5,7 +5,6 @@ async function fetchData(){
     try{
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-        display.value = eval(display.value);
         if(!response.ok){
             throw new Error("coulnt fetch")
         }
