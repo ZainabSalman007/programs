@@ -1,13 +1,45 @@
 const display = document.getElementById("display");
 const total = document.getElementById("total");
 
+let calculated = false;
+
 function work(input) {
+    if (display.value === "Error") {
+        display.value = "";
+        calculated = false;
+
+        if (["+", "-", "*", "/"].includes(input)) {
+            return;
+        }
+    }
+    else if (calculated) {
+        if (!["+", "-", "*", "/"].includes(input)) {
+            display.value = "";
+        }
+        calculated = false;
+    }
+
+    const lastChar = display.value.slice(-1);
+    const expressions = ["+", "-", "*", "/"];
+
+    if (expressions.includes(input) && expressions.includes(lastChar)) {
+        return;
+    }
+    if (input === ".") {
+        const currentNumber = display.value.split(/[+\-*/()]/).pop();
+
+        if (currentNumber.includes(".")) {
+            return;
+        }
+    }
+
     display.value += input;
 }
 
 function erase() {
     display.value = "";
     total.textContent = "Total:";
+    calculated = false;
 }
 
 function calculate() {
@@ -26,9 +58,13 @@ function calculate() {
     }
 }
 
-function work(input) {
-    display.value += input;
-    calculated = false;
+function backspace() {
+    if (calculated) {
+        display.value = "";
+        calculated = false;
+    } else {
+        display.value = display.value.slice(0, -1);
+    }
 }
 
 document.addEventListener("keydown", function(event) {
@@ -151,31 +187,35 @@ document.addEventListener("keydown", function(event) {
 
 });
 
-document.addEventListener("keydown", function(event) { 
-    if (event.key === "Backspace") { 
+document.addEventListener("keydown", function(event) {
 
-        if (calculated) {
-            display.value = "";
-            calculated = false;
-        } else {
-            display.value = display.value.slice(0, -1);
-        }
+    if (event.key === "(") {
+        work("(");
+    }
 
-    } 
 });
 
-function backspace() {
-    if (calculated) {
-        display.value = "";
-        calculated = false;
-    } else {
-        display.value = display.value.slice(0, -1);
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === ")") {
+        work(")");
     }
-}
+
+});
 
 document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Backspace") {
+        backspace();
+    }
+
+});
+
+document.addEventListener("keydown", function(event) {
+
     if (event.key === "Enter") {
         event.preventDefault();
         calculate();
     }
+
 });

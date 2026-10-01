@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Calculator</title>
-   <link rel="stylesheet" href="style.css?v=4">
+   <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -16,6 +16,7 @@
       <input id="display" readonly>
 
       <div id="keys">
+
         <button onclick="work('+')" class="operators">+</button>
         <button onclick="work('7')">7</button>
         <button onclick="work('8')">8</button>
@@ -38,6 +39,9 @@
 
         <button onclick="erase()" class="operators">C</button>
         <button onclick="backspace()" class="operators">⌫</button>
+        <button onclick="work('(')" class="operators">(</button>
+        <button onclick="work(')')" class="operators">)</button>
+
       </div>
     </div>
 
@@ -45,6 +49,6 @@
 
   </div>
 
-  <script src="code.js?v=4"></script>
+  <script src="code.js?v=5"></script>
 </body>
 </html>
