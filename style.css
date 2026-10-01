@@ -9,10 +9,20 @@ body {
     box-sizing: border-box;
 }
 
+#calculator-container {
+    text-align: center;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
 #calculator {
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0%, 15%);
-    width: 85%;
+    width: 85vw;
     max-width: 400px;
     overflow: hidden;
     border-radius: 15px;
@@ -49,7 +59,7 @@ button {
 }
 
 button:hover {
-    background-color: hsl(0, 0%, 40%);
+     background-color: hsl(0, 0%, 40%);
 }
 
 button:active {
@@ -66,4 +76,11 @@ button:active {
 
 .operators:active {
     background-color: hsl(39, 100%, 70%);
+}
+
+#total {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
 }
