@@ -164,6 +164,15 @@ document.addEventListener("keydown", function(event) {
     } 
 });
 
+function backspace() {
+    if (calculated) {
+        display.value = "";
+        calculated = false;
+    } else {
+        display.value = display.value.slice(0, -1);
+    }
+}
+
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
