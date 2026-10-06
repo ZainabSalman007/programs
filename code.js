@@ -5,7 +5,6 @@ let calculated = false;
 
 function work(input) {
 
-    // If Error is showing, always start fresh
     if (display.value === "Error") {
         display.value = "";
         calculated = false;
@@ -13,12 +12,7 @@ function work(input) {
         if (["+", "-", "*", "/"].includes(input)) {
             return;
         }
-    }
-
-    // If a result is showing
-    else if (calculated) {
-
-        // Numbers, decimal and brackets start a new calculation
+    }else if (calculated) {
         if (!["+", "-", "*", "/"].includes(input)) {
             display.value = "";
         }
@@ -30,12 +24,9 @@ function work(input) {
 
     const expressions = ["+", "-", "*", "/"];
 
-    // Don't allow two operators in a row
     if (expressions.includes(input) && expressions.includes(lastChar)) {
         return;
     }
-
-    // Don't allow more than one decimal in the same number
     if (input === ".") {
         const currentNumber = display.value.split(/[+\-*/()]/).pop();
 
@@ -43,24 +34,16 @@ function work(input) {
             return;
         }
     }
-
-    // Don't allow an opening bracket after an operator
     if (input === "(" && lastChar === ")") {
         display.value += input;
         return;
     }
-
-    // Don't allow a closing bracket at the beginning
     if (input === ")" && display.value === "") {
         return;
     }
-
-    // Don't allow a closing bracket after an operator or opening bracket
     if (input === ")" && (expressions.includes(lastChar) || lastChar === "(")) {
         return;
     }
-
-    // Don't allow more closing brackets than opening brackets
     if (input === ")") {
         const openBrackets = (display.value.match(/\(/g) || []).length;
         const closeBrackets = (display.value.match(/\)/g) || []).length;
@@ -84,8 +67,6 @@ function calculate() {
         if (display.value.includes("//")) {
             throw new Error("Invalid expression");
         }
-
-        // Don't calculate if brackets are not closed
         const openBrackets = (display.value.match(/\(/g) || []).length;
         const closeBrackets = (display.value.match(/\)/g) || []).length;
 
@@ -94,11 +75,7 @@ function calculate() {
         }
 
         let expression = display.value;
-
-        // Add multiplication between a number and an opening bracket
         expression = expression.replace(/(\d|\))\(/g, "$1*(");
-
-        // Add multiplication between a closing bracket and a number
         expression = expression.replace(/\)(\d)/g, ")*$1");
 
         display.value = eval(expression);
