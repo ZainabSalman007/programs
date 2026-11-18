@@ -20,4 +20,4 @@ jobs:
           username: zainab
           key: ${{ secrets.DEPLOY_KEY }}
           source: "index.html,style.css,code.js"
-          target: "/home/zainab/htdocs/abc.sunztech.com/"
+          target: "/home/zainab/htdocs/zainab.sunztech.com/"
